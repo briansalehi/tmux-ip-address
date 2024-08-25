@@ -16,7 +16,7 @@ do_interpolation() {
     ip_addr="Offline"
   fi
 
-  local interpolated="$(echo $1 | sed "s/$ip_address_interpolation_string/\x07$ip_addr\x07/g")"
+  local interpolated="$(echo $1 | sed "s/$ip_address_interpolation_string/$ip_addr/g")"
 
   echo "$interpolated"
 }
