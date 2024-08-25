@@ -14,11 +14,9 @@ do_interpolation() {
   if [ -z "$ip_addr" ]
   then
     ip_addr="Offline"
-  else
-    ip_addr="Online"
   fi
 
-  #local interpolated="$(echo $1 | sed "s/$ip_address_interpolation_string/$ip_addr/g")"
+  local interpolated="$(echo $1 | sed "s/$ip_address_interpolation_string/Online/g")"
 
   echo "$interpolated"
 }
