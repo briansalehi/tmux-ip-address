@@ -16,9 +16,9 @@ do_interpolation() {
     ip_addr="Offline"
   fi
 
-  local interpolated="$(echo $1 | sed "s/$ip_address_interpolation_string/x $ip_addr x/g")"
+  local interpolated="$(echo $1 | sed "s/$ip_address_interpolation_string/$ip_addr/g")"
 
-  echo "$interpolated"
+  echo "x $interpolated x"
 }
 
 update_tmux_option() {
